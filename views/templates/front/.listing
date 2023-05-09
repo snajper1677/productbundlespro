@@ -1,0 +1,6 @@
+drwxr-xr-x   2 ftp      ftp          4096 Dec 30 09:29 .
+drwxr-xr-x   4 ftp      ftp          4096 Dec 30 09:29 ..
+-rw-r--r--   1 ftp      ftp          5726 Oct 24 15:58 hook_product_cartblock.tpl
+-rw-r--r--   1 ftp      ftp           706 Oct 24 15:58 index.php
+-rw-r--r--   1 ftp      ftp          1981 Oct 24 15:58 product_footer.tpl
+-rw-r--r--   1 ftp      ftp         22424 Oct 24 15:58 widget.tpl
