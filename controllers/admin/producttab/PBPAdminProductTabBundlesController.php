@@ -206,6 +206,7 @@ class PBPAdminProductTabBundlesController extends PBPControllerCore
 
         $return = array();
         $return['id_bundle'] = $bundle->id_bundle;
+        PBPReverseBundle::duplicateBundleReverse($bundle->id_bundle);
         return Tools::jsonEncode($return);
     }
 

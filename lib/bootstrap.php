@@ -36,6 +36,7 @@ include_once(_PS_MODULE_DIR_ . "/productbundlespro/helpers/PBPCartProductHelper.
 include_once(_PS_MODULE_DIR_ . "/productbundlespro/helpers/PBPCartProductExtraHelper.php");
 include_once(_PS_MODULE_DIR_ . "/productbundlespro/helpers/PBPUtilityHelper.php");
 include_once(_PS_MODULE_DIR_ . "/productbundlespro/helpers/PBPVoucherHelper.php");
+include_once(_PS_MODULE_DIR_ . "/productbundlespro/helpers/PBPReverseBundle.php");
 
 /* Admin Controllers */
 include_once(_PS_MODULE_DIR_ . "/productbundlespro/controllers/admin/config/PBPAdminConfigMainController.php");

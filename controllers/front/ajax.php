@@ -29,6 +29,11 @@ class ProductBundlesProAjaxModuleFrontController extends ModuleFrontController
             case 'pbpfrontproductcontroller':
                 $pbp_front_product_controller = new PBPFrontProductController($this);
                 die($pbp_front_product_controller->route());
+            case 'duplicateBundle':
+                die(PBPReverseBundle::duplicateBundleReverse(Tools::getValue('id_bundle')));
+            case 'deleteAllBundle':
+                PBPMassAssignHelper::deleteProductBundles(Tools::getValue('id_product'),1);
+                break;
         }
     }
 }
