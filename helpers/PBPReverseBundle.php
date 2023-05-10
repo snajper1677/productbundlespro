@@ -42,6 +42,8 @@ class PBPReverseBundle
         $old_product_a['qty'] = 1;
 
         foreach ($bundle_products as $bp) {
+            if ($bp['id_product'] == $old_product_a['id_product'])
+                continue;
             $pbp_bundle_model_new = new PBPBundleModel();
             $pbp_bundle_model_new->id_bundle = (int)$pbp_bundle_model_new::getNewBundleID();
             $pbp_bundle_model_new->id_tab = (int)$pbp_bundle_model->id_tab;
@@ -53,6 +55,8 @@ class PBPReverseBundle
             $pbp_bundle_model_new->discount_type = $bp['discount_type'];
             $pbp_bundle_model_new->discount_amount = (float)$bp['discount_amount'];
             $pbp_bundle_model_new->discount_enabled = (int)$pbp_bundle_model->discount_enabled;
+            $pbp_bundle_model_new->parent_product_discount_amount = (float)$bp['discount_amount'];
+            $pbp_bundle_model_new->parent_product_discount_type = $bp['discount_type'];;
             $pbp_bundle_model_new->add();
 
             $n = "Zestaw";
@@ -64,6 +68,8 @@ class PBPReverseBundle
                 }
 
                 if ($bp['id_product'] == $bpp['id_product'])
+                    continue;
+                if ($bp['id_product'] == $old_product_a['id_product'])
                     continue;
 
                 $n .= "_" . $bpp['id_product'];
